@@ -8,6 +8,7 @@ macro(add_emitter)
 endmacro()
 
 add_emitter(area        area.cpp)
+add_emitter(iesarea        iesarea.cpp)
 add_emitter(collimated  collimated.cpp)
 add_emitter(directional directional.cpp)
 add_emitter(point       point.cpp)

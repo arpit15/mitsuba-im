@@ -2830,7 +2830,7 @@ void Bitmap::readOpenEXR(Stream *stream, const std::string &_prefix) {
 			#if SPECTRUM_SAMPLES != 3
 				for (int i=0; i<SPECTRUM_SAMPLES; ++i) {
 					std::pair<Float, Float> coverage = Spectrum::getBinCoverage(i);
-					if (!ch_spec[i] && ends_with(name, formatString("%.2f-%.2fnm", coverage.first, coverage.second))) {
+					if (!ch_spec[i] && ends_with(name, formatString("%.2f-%.2fnm", coverage.first, coverage.second).c_str())) {
 						isSpectralChannel = true;
 						ch_spec[i] = it.name();
 						break;
